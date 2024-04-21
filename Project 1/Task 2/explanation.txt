@@ -1,0 +1,24 @@
+Each CPU scheduling algorithm is given it's own file due to complications when implementing them together. This does, however, make it easier to identify each algorithm independently.
+
+Due to these complications, the main portion of each file is fundamentally the same and only differs in terms of functions used.
+
+Since each file reads from the same input.txt file, all variables are stored regardless of whether they are used. A sample example of possible values are included already. The input.txt file uses the following format:
+[Pid1 Arrival_Time1 Burst_Time1 Priority1]
+[Pid2 Arrival_Time2 Burst_Time2 Priority2]
+[Pid3 Arrival_Time3 Burst_Time3 Priority3]
+...
+[Time-quantum]
+
+
+
+-FCFS
+Most simple to implement. Completes processes in order which they appear without worrying about priority or time quantum.
+
+-SJF
+Recursively goes through each process to identify which is the next shortest.
+
+-PPS
+Utilizes the priority variable for each process. Lower values mean they are given higher priority.
+
+-RR
+Utilizes the time quantum variable to give each process a shared amount of time. It should be noted that CPU Utilization could not be implemented in the same way every other algorithms was implemented due to an unknown error, although it should theoretically be 100% anyway unless the arrival times were extremely disproportionate. 

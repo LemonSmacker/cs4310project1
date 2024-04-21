@@ -1,0 +1,6 @@
+This program acts like a divide and conquer algorithm, where each half is sorted and then combined into one array.
+
+A sample list of integers are used on line 8, although they can be changed to any values.
+thread1 and thread2 take the first and second halves of the globalArray.
+Both halves are then sorted using the sort() command.
+The two halves are compared and inserted into the sortedArray accordingly, depending on which is less.
